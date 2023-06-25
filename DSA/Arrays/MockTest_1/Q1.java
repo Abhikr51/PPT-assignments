@@ -1,4 +1,4 @@
-class Mock1 {
+class Q1 {
     public static void main(String[] args) {
         Solution s = new Solution();
         int[] arr = { 0, 1, 0, 3, 12 };
