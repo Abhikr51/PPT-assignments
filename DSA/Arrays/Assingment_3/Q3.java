@@ -31,27 +31,48 @@ import java.util.Arrays;
 public class Q3 {
     public static void main(String[] args) {
         Solution sol = new Solution();
-        int[] nums = {-1,2,1,-4};
-        int res = sol.threeSumClosest(nums,1);
-        System.out.println(res);
+        int[] nums = {1,2,3};
+        sol.nextPermutation(nums);
+        System.out.print("[ ");
+        for(int i :nums){
+            System.out.print(i + ",");
+        }
+        System.out.print(" ]");
     }
 }
 
 
 
 class Solution {
-    public int threeSumClosest(int[] nums, int target) {
-        int result=nums[0]+nums[1]+nums[nums.length-1];
-        Arrays.sort(nums);
-        for (int i=0;i<nums.length-2;i++) {
-            int start=i+1,end=nums.length-1;
-            while(start<end) {
-                int sum=nums[i]+nums[start]+nums[end];
-                if(sum>target) end--;
-                else start++;
-                if (Math.abs(sum-target)<Math.abs(result-target)) result=sum;
-            }
+    public void nextPermutation(int[] A) {
+        int N = A.length;
+        int i;
+        int j;
+
+        for (i = N - 2; i >= 0; i--) {
+            if (A[i] < A[i + 1])
+                break;
         }
-        return result;
+
+        if (i >= 0) {
+            for (j = N - 1; j > i; j--) {
+                if (A[i] < A[j])
+                    break;
+            }
+            swap(A, i, j);
+        }
+        reverse(A, i + 1, N - 1);
+    }
+
+    public void reverse(int[] A, int start, int end) {
+        while (start < end) {
+            swap(A, start++, end--);
+        }
+    }
+
+    public void swap(int[] A, int i, int j) {
+        int temp = A[i];
+        A[i] = A[j];
+        A[j] = temp;
     }
 }
