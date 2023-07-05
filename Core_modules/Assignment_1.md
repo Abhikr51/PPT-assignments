@@ -1,7 +1,7 @@
 
-# Assingment 1
+# Assignment 1
 
-Pw Skills Java Core Module assingment's answers.
+Pw Skills Java Core Module assignment's answers.
 
 ## Solutions
 
@@ -33,7 +33,7 @@ In other words, the compiler (javac.exe) generates bytecode during the compilati
 A bytecode is a binary code that is understood and interpreted by Java Virtual Machine (JVM) on the underlying operating system. It is not similar to machine code.
 #### Q7.Explain the types of variables in Java?
 - Local 
-- Instanse
+- Instance
 - Static
 #### Q8.What are the Datatypes in Java?
 - byte
@@ -49,7 +49,7 @@ A bytecode is a binary code that is understood and interpreted by Java Virtual M
 Identifer is a name in java program .Identifer can be classname,methodname,variablename,labelname.
 
 #### Q10.Explain the architecture of JVM 
-*JVM have several areas given below that are involed to exicute a java program.*
+*JVM has several areas given below that are involved to execute a java program.*
 
 * Classloader
     * Bootstrap ClassLoader
