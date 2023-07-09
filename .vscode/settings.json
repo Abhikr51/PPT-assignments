@@ -1,3 +1,5 @@
 {
-    "java.project.sourcePaths": []
+    "java.project.sourcePaths": [
+        "Mocktest_2_java_core"
+    ]
 }
